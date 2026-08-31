@@ -72,7 +72,7 @@
         })
         .catch(function () {
           status.className = "form-status err";
-          status.textContent = "No se ha podido enviar. Prueba por WhatsApp o escríbeme a marta@entrenanas.es.";
+          status.textContent = "No se ha podido enviar. Prueba por WhatsApp o escríbeme a entrenanas.es@gmail.com.";
         })
         .finally(function () {
           btn.disabled = false;
