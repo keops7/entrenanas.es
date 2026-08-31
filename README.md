@@ -1,48 +1,39 @@
 # entrenanas.es
 
 Sitio web estático de **entre nanas** — Marta Muñoz, asesora de sueño infantil.
-Alojado en **Cloudflare Pages**, conectado a este repo de GitHub (`keops7/entrenanas.es`):
-cada push a `main` publica automáticamente.
+Alojado en **Cloudflare Pages**, conectado a este repo (`keops7/entrenanas.es`):
+cada push a `main` publica automáticamente. No hay build: se sirve `public/` tal cual.
 
 ## Estructura
 
 - `public/` — todo lo que se publica (HTML, CSS, imágenes en `public/assets/`).
 - `public/_headers` — cabeceras HTTP (CSP, caché) que aplica Cloudflare Pages.
-- `wrangler.toml` — configuración de Cloudflare Pages (`pages_build_output_dir = "public"`).
+- `public/_redirects` — reglas de redirección (si hacen falta).
 
-## Ajustes en Cloudflare Pages
-
-Al crear el proyecto en Cloudflare Pages conectado a este repo:
+## Ajustes del proyecto en Cloudflare Pages
 
 | Campo | Valor |
 |---|---|
 | Production branch | `main` |
 | Framework preset | None |
 | Build command | *(vacío)* |
+| Deploy command | *(vacío)* |
 | Build output directory | `public` |
 | Root directory | `/` |
 
-No hay paso de build: se sirve `public/` tal cual.
+> ⚠️ El **Deploy command** debe estar **vacío**. Si Cloudflare lo rellena con
+> `npx wrangler deploy`, bórralo: ese comando es para Workers y hace fallar el
+> despliegue de un proyecto Pages.
 
 ## Desarrollo local
 
-```bash
-npm install                                  # instala wrangler
-npx wrangler pages dev public --port 8788     # http://localhost:8788
-```
-
-## Despliegue manual (alternativa al git push)
+Cualquier servidor estático sirve. Por ejemplo:
 
 ```bash
-npx wrangler login
-npx wrangler pages deploy public --project-name=entrenanas
+npx wrangler pages dev public      # http://localhost:8788
+# o
+python -m http.server -d public 8788
 ```
-
-## Dominio
-
-`entrenanas.es` registrado en DonDominio. DNS gestionado por Cloudflare
-(nameservers del dominio apuntados a Cloudflare). El dominio se conecta al
-proyecto en **Pages → Custom domains**.
 
 ## Pendiente
 
