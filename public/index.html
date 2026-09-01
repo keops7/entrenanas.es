@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/assets/style.css?v=3" />
+<link rel="stylesheet" href="/assets/style.css?v=4" />
 
 <script type="application/ld+json">
 {
@@ -285,56 +285,22 @@
   </section>
 
   <!-- CONTACTO -->
-  <section class="section" id="contacto">
-    <div class="wrap two-col contact-grid">
-      <div>
-        <p class="eyebrow">Contacto</p>
-        <h2>Reserva tu valoración gratuita</h2>
-        <p>
-          Cuéntame brevemente qué está pasando con el sueño de tu peque. Te
-          responderé lo antes posible, sin compromiso.
-        </p>
-        <ul class="contact-list">
-          <li>
-            <a href="https://wa.me/34625819825?text=Hola%20Marta%2C%20me%20gustar%C3%ADa%20una%20valoraci%C3%B3n%20gratuita" target="_blank" rel="noopener">
-              WhatsApp · 625 81 98 25
-            </a>
-          </li>
-          <li><a href="mailto:entrenanas.es@gmail.com">entrenanas.es@gmail.com</a></li>
-          <li><a href="https://www.instagram.com/entrenanas.es" target="_blank" rel="noopener">Instagram · @entrenanas.es</a></li>
-        </ul>
+  <section class="section section-mint" id="contacto">
+    <div class="wrap contact-simple">
+      <p class="eyebrow">Contacto</p>
+      <h2>Reserva tu valoración gratuita</h2>
+      <p>
+        Cuéntame por WhatsApp o por correo qué está pasando con el sueño de tu
+        peque. Te responderé lo antes posible, sin compromiso.
+      </p>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="https://wa.me/34625819825?text=Hola%20Marta%2C%20me%20gustar%C3%ADa%20una%20valoraci%C3%B3n%20gratuita" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+        <a class="btn btn-ghost" href="mailto:entrenanas.es@gmail.com">Enviar un correo</a>
       </div>
-
-      <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-        <!-- TODO: pon aquí la access key gratuita de https://web3forms.com (llega por email) -->
-        <input type="hidden" name="access_key" value="REEMPLAZAR_CON_ACCESS_KEY_WEB3FORMS" />
-        <input type="hidden" name="subject" value="Nueva solicitud de valoración — entrenanas.es" />
-        <input type="hidden" name="from_name" value="Web entrenanas.es" />
-        <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" />
-
-        <label>
-          Nombre
-          <input type="text" name="nombre" required autocomplete="name" />
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" required autocomplete="email" />
-        </label>
-        <label>
-          Teléfono <span class="opt">(opcional)</span>
-          <input type="tel" name="telefono" autocomplete="tel" />
-        </label>
-        <label>
-          Cuéntame tu caso
-          <textarea name="mensaje" rows="4" required placeholder="Edad del peque, cómo son las noches, qué habéis probado…"></textarea>
-        </label>
-        <label class="check">
-          <input type="checkbox" name="rgpd" required />
-          <span>He leído y acepto la <a href="/privacidad">política de privacidad</a>.</span>
-        </label>
-        <button type="submit" class="btn btn-primary btn-block">Enviar</button>
-        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-      </form>
+      <p class="contact-alt">
+        También me encuentras en Instagram:
+        <a href="https://www.instagram.com/entrenanas.es" target="_blank" rel="noopener">@entrenanas.es</a>
+      </p>
     </div>
   </section>
 
@@ -364,6 +330,6 @@
   <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.5 8.6 3.5 15.5c0 2.4.7 4.6 1.8 6.5L3 29l7.2-2.2c1.8 1 3.9 1.5 6 1.5 6.9 0 12.5-5.6 12.5-12.5S22.9 3 16 3zm0 22.6c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.3 1.3 1.3-4.2-.2-.4a10.3 10.3 0 01-1.6-5.6C5.4 9.7 10.2 5 16 5s10.6 4.7 10.6 10.5S21.8 25.6 16 25.6zm5.9-7.8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2c-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.4-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.6h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.3 2.4 3.7 5.8 5.1.8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
 </a>
 
-<script src="/assets/main.js?v=3" defer></script>
+<script src="/assets/main.js?v=4" defer></script>
 </body>
 </html>

@@ -134,7 +134,7 @@ h3 { font-size: 1.3rem; margin-bottom: .4rem; color: var(--sage-dark); }
 
 /* ---------- Dos columnas ---------- */
 .two-col { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(1.6rem, 5vw, 3.5rem); align-items: center; }
-.portrait img, .contact-form { border-radius: var(--radius); }
+.portrait img { border-radius: var(--radius); }
 .portrait img { box-shadow: var(--shadow); }
 #sobre-mi p + p { margin-top: .9rem; }
 
@@ -202,26 +202,12 @@ blockquote cite { display: block; margin-top: .9rem; font-style: normal; font-si
 .faq details p { padding-bottom: 1.2rem; color: #e7ece2; }
 
 /* ---------- Contacto ---------- */
-.contact-grid { align-items: start; }
-.contact-list { list-style: none; margin-top: 1.4rem; display: grid; gap: .7rem; }
-.contact-list a { font-weight: 400; color: var(--ink); text-decoration: none; }
-.contact-list a:hover { color: var(--accent); }
-.contact-form { background: var(--white); padding: clamp(1.5rem, 4vw, 2.2rem); box-shadow: var(--shadow); display: grid; gap: 1rem; }
-.contact-form label { display: grid; gap: .35rem; font-size: .9rem; color: var(--ink-soft); font-weight: 400; }
-.contact-form .opt { color: #9aa89d; }
-.contact-form input, .contact-form textarea {
-  font-family: var(--font-body); font-size: 1rem; font-weight: 300;
-  padding: .75rem .9rem; border: 1.5px solid #d7ded6; border-radius: 10px;
-  background: var(--cream-2); color: var(--ink); width: 100%;
-}
-.contact-form input:focus, .contact-form textarea:focus { outline: 2px solid var(--sage); border-color: var(--sage); background: #fff; }
-.contact-form textarea { resize: vertical; }
-.check { grid-template-columns: auto 1fr; align-items: start; gap: .6rem !important; }
-.check input { width: auto; margin-top: .25rem; }
-.form-status { font-size: .9rem; min-height: 1.2em; }
-.form-status.ok { color: var(--accent); }
-.form-status.err { color: #b3402e; }
-.hidden { display: none !important; }
+.contact-simple { max-width: 620px; margin-inline: auto; text-align: center; }
+.contact-simple .eyebrow { display: block; }
+.contact-simple > p { margin-top: .8rem; }
+.contact-actions { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; margin-top: 1.8rem; }
+.contact-alt { margin-top: 1.4rem; font-size: .95rem; color: var(--ink-soft); }
+.contact-alt a { color: var(--accent); }
 
 /* ---------- Footer ---------- */
 .site-footer { background: var(--sage-dark); color: var(--cream); padding: 3rem 0 2rem; }
