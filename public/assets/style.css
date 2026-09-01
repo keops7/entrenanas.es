@@ -23,15 +23,30 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; background: var(--cream); }
 
 body {
   font-family: var(--font-body);
   font-weight: 400;
   color: var(--ink);
-  background: var(--cream);
+  background: transparent;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Foto de fondo fija para toda la web, atenuada con un velo crema */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-color: var(--cream);
+  background-image:
+    linear-gradient(rgba(241, 238, 233, .55), rgba(241, 238, 233, .55)),
+    url("/assets/img/band-bebe.jpg");
+  background-size: cover;
+  background-position: center 35%;
+  background-repeat: no-repeat;
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -118,40 +133,17 @@ h3 { font-size: 1.3rem; margin-bottom: .4rem; color: var(--sage-dark); }
 .btn-block { display: block; width: 100%; margin-top: 1.2rem; }
 
 /* ---------- Secciones ---------- */
+/* Las secciones "crema" son transparentes: dejan ver la foto de fondo.
+   Las de color son paneles semitransparentes sobre esa foto. */
 .section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
-.section-sage { background: var(--sage); color: var(--cream); }
+.section-sage { background: rgba(80, 100, 88, .90); color: var(--cream); }
 .section-sage h3 { color: #fff; }
-.section-sage p { color: #e7ece2; }
-.section-mint { background: var(--mint); }
+.section-sage p { color: #eef2ec; }
+.section-mint { background: rgba(203, 221, 208, .62); }
 .section-mint h3 { color: var(--sage-dark); }
 
-/* ---------- Banda con foto ---------- */
-.quote-band {
-  min-height: clamp(300px, 46vh, 460px);
-  display: grid;
-  place-items: center;
-  text-align: center;
-  background-color: var(--sage-dark);
-  background-image:
-    radial-gradient(ellipse at center, rgba(24, 29, 23, .58) 0%, rgba(24, 29, 23, .46) 70%),
-    url("/assets/img/band-bebe.jpg");
-  background-size: cover;
-  background-position: center 62%;
-  background-repeat: no-repeat;
-}
-.quote-band p {
-  font-family: var(--font-head);
-  font-weight: 600;
-  color: #fff;
-  font-size: clamp(1.6rem, 4.5vw, 2.7rem);
-  line-height: 1.2;
-  max-width: 20ch;
-  margin-inline: auto;
-  text-shadow: 0 2px 24px rgba(0, 0, 0, .35);
-}
-
 /* ---------- Hero ---------- */
-.hero { background: linear-gradient(180deg, var(--mint) 0%, var(--cream) 100%); padding: clamp(2.5rem, 6vw, 4.5rem) 0 clamp(3rem, 7vw, 5rem); }
+.hero { background: linear-gradient(180deg, rgba(203, 221, 208, .55) 0%, rgba(241, 238, 233, 0) 100%); padding: clamp(2.5rem, 6vw, 4.5rem) 0 clamp(3rem, 7vw, 5rem); }
 .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(2rem, 5vw, 3.5rem); align-items: center; }
 .hero h1 { margin-bottom: 1.2rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.8rem; }
