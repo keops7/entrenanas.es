@@ -133,10 +133,10 @@ h3 { font-size: 1.3rem; margin-bottom: .4rem; color: var(--sage-dark); }
   text-align: center;
   background-color: var(--sage-dark);
   background-image:
-    linear-gradient(rgba(28, 33, 27, .46), rgba(28, 33, 27, .52)),
+    radial-gradient(ellipse at center, rgba(24, 29, 23, .58) 0%, rgba(24, 29, 23, .46) 70%),
     url("/assets/img/band-bebe.jpg");
   background-size: cover;
-  background-position: center 60%;
+  background-position: center 62%;
   background-repeat: no-repeat;
 }
 .quote-band p {
