@@ -193,7 +193,7 @@ h3 { font-size: 1.3rem; margin-bottom: .4rem; color: var(--sage-dark); }
 }
 
 /* ---------- Testimonios ---------- */
-.quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 2rem; align-items: start; }
+.quotes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; margin-top: 2rem; align-items: start; max-width: 900px; margin-inline: auto; }
 blockquote {
   background: var(--white); border-radius: var(--radius-sm);
   padding: 1.6rem; box-shadow: var(--shadow);
@@ -294,7 +294,8 @@ blockquote cite { display: block; margin-top: .9rem; font-style: normal; font-si
 @media (min-width: 980px) {
   .cards { grid-template-columns: repeat(3, 1fr); }
   .steps { grid-template-columns: repeat(4, 1fr); }
-  .quotes, .method-grid { grid-template-columns: repeat(3, 1fr); }
+  .method-grid { grid-template-columns: repeat(3, 1fr); }
+  .quotes { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (prefers-reduced-motion: reduce) {
