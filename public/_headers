@@ -5,5 +5,11 @@
   Permissions-Policy: geolocation=(), microphone=(), camera=()
   Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self' https://api.web3forms.com; form-action 'self' https://api.web3forms.com; frame-ancestors 'self'; base-uri 'self'
 
+# CSS/JS: caché corta — el sitio no versiona los nombres de fichero, así que los
+# cambios tienen que llegar pronto a quien ya haya visitado.
 /assets/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=3600
+
+# Imágenes: cambian poco y pesan, caché más larga.
+/assets/img/*
+  Cache-Control: public, max-age=604800
