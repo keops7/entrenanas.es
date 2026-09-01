@@ -192,15 +192,27 @@ h3 { font-size: 1.3rem; margin-bottom: .4rem; color: var(--sage-dark); }
   font-variant-numeric: lining-nums; font-weight: 700;
 }
 
-/* ---------- Testimonios ---------- */
-.quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 2rem; align-items: start; }
-blockquote {
-  background: var(--white); border-radius: var(--radius-sm);
-  padding: 1.6rem; box-shadow: var(--shadow);
-  border-left: 4px solid var(--sand);
+/* ---------- Testimonios (tarjetas de mensaje) ---------- */
+.quotes { display: grid; grid-template-columns: 1fr; gap: 1.8rem 1.6rem; margin-top: 2.6rem; align-items: start; }
+
+.msg { display: grid; gap: .5rem; }
+.msg-head { display: flex; align-items: center; gap: .6rem; }
+.msg-avatar {
+  width: 2.5rem; height: 2.5rem; border-radius: 50%; flex-shrink: 0;
+  display: grid; place-items: center;
+  background: var(--sage); color: #fff;
+  font-family: var(--font-head); font-weight: 600; font-size: .95rem; letter-spacing: .02em;
 }
-blockquote p { font-family: var(--font-head); font-size: 1.15rem; font-style: italic; color: var(--ink); }
-blockquote cite { display: block; margin-top: .9rem; font-style: normal; font-size: .85rem; color: var(--ink-soft); }
+.msg-name { font-weight: 600; font-size: .95rem; color: var(--sage-dark); font-style: normal; }
+.msg-bubble {
+  margin-left: .55rem;
+  background: rgba(255, 255, 255, .92);
+  border: 1px solid rgba(92, 115, 102, .14);
+  border-radius: 20px 20px 20px 6px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 12px 32px -22px rgba(39, 39, 39, .45);
+}
+.msg-bubble p { font-size: 1.02rem; line-height: 1.62; color: var(--ink); font-style: normal; }
 
 /* ---------- FAQ ---------- */
 .faq { margin-top: 2rem; max-width: 780px; }
@@ -271,7 +283,7 @@ blockquote cite { display: block; margin-top: .9rem; font-style: normal; font-si
 @media (max-width: 900px) {
   .hero-grid, .two-col { grid-template-columns: 1fr; }
   .hero-media { order: -1; }
-  .method-grid, .cards, .steps, .quotes { grid-template-columns: 1fr; }
+  .method-grid, .cards, .steps { grid-template-columns: 1fr; }
   .site-nav {
     position: fixed; inset: 72px 0 auto 0;
     flex-direction: column; align-items: stretch; gap: 0;
@@ -289,12 +301,17 @@ blockquote cite { display: block; margin-top: .9rem; font-style: normal; font-si
 
 @media (min-width: 620px) {
   .cards { grid-template-columns: repeat(2, 1fr); }
-  .steps, .quotes, .method-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps, .method-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 760px) {
+  .quotes { grid-template-columns: repeat(2, 1fr); }
+  /* si el nº de testimonios es impar, el último ocupa toda la fila y se centra */
+  .quotes > .msg:last-child:nth-child(odd) { grid-column: 1 / -1; max-width: calc(50% - .8rem); margin-inline: auto; }
 }
 @media (min-width: 980px) {
   .cards { grid-template-columns: repeat(3, 1fr); }
   .steps { grid-template-columns: repeat(4, 1fr); }
-  .quotes, .method-grid { grid-template-columns: repeat(3, 1fr); }
+  .method-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (prefers-reduced-motion: reduce) {
