@@ -176,7 +176,7 @@ h3 { font-size: 1.3rem; margin-bottom: .4rem; color: var(--sage-dark); }
 }
 
 /* ---------- Testimonios ---------- */
-.quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 2rem; }
+.quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 2rem; align-items: start; }
 blockquote {
   background: var(--white); border-radius: var(--radius-sm);
   padding: 1.6rem; box-shadow: var(--shadow);
