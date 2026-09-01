@@ -42,10 +42,10 @@ body::before {
   z-index: -1;
   background-color: var(--cream);
   background-image:
-    linear-gradient(rgba(241, 238, 233, .55), rgba(241, 238, 233, .55)),
+    linear-gradient(rgba(241, 238, 233, .42), rgba(241, 238, 233, .42)),
     url("/assets/img/band-bebe.jpg");
   background-size: cover;
-  background-position: center 35%;
+  background-position: center 55%;
   background-repeat: no-repeat;
 }
 
