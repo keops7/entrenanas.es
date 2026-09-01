@@ -32,6 +32,7 @@
       okBtn.addEventListener("click", function () {
         try { localStorage.setItem("en_cookies_ok", "1"); } catch (e) {}
         banner.hidden = true;
+        banner.style.display = "none";
       });
     }
   } catch (e) { /* localStorage no disponible: no mostramos banner persistente */ }
